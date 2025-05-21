@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>DuckBus | Замовити автобус</title>
+</head>
+<body>
+    <div class="hrmain">
+        <hr class="hrbone">
+        <img src="img/DuckBus1.png" class="duck">
+    </div>
+    <div class="menu">
+        <img src="img/man.png" class="h12">
+    </div>
+    <a href="https://budegood.com" target="_blank">
+        <img src="img/ad.png" class="ad">
+    </a>
+    <div>
+        <div class="zak" align="center">
+            <form>
+                <fieldset>
+                    <legend>
+                        Звідки
+                    </legend>
+                    <select>
+                        <option>Вінниця</option>
+                        <option>Дніпро</option>
+                        <option disabled>Донецьк</option>
+                        <option>Житомир</option>
+                        <option>Запоріжжя</option>
+                        <option>Івано-Франківськ</option>
+                        <option>Київ</option>
+                        <option>Кропивницький</option>
+                        <option disabled>Луганськ</option>
+                        <option>Луцьк</option>
+                        <option selected>Львів</option>
+                        <option>Миколаїв</option>
+                        <option>Одеса</option>
+                        <option>Полтава</option>
+                        <option>Рівне</option>
+                        <option>Суми</option>
+                        <option disabled>Сімперофоль</option>
+                        <option>Тернопіль</option>
+                        <option>Ужгород</option>
+                        <option>Харків</option>
+                        <option>Херсон</option>
+                        <option>Хмельницький</option>
+                        <option>Черкаси</option>
+                        <option>Чернівці</option>
+                        <option>Чернігів</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Куди
+                    </legend>
+                    <select>
+                        <option>Вінниця</option>
+                        <option>Дніпро</option>
+                        <option disabled>Донецьк</option>
+                        <option>Житомир</option>
+                        <option>Запоріжжя</option>
+                        <option>Івано-Франківськ</option>
+                        <option selected>Київ</option>
+                        <option>Кропивницький</option>
+                        <option disabled>Луганськ</option>
+                        <option>Луцьк</option>
+                        <option>Львів</option>
+                        <option>Миколаїв</option>
+                        <option>Одеса</option>
+                        <option>Полтава</option>
+                        <option>Рівне</option>
+                        <option>Суми</option>
+                        <option disabled>Сімперофоль</option>
+                        <option>Тернопіль</option>
+                        <option>Ужгород</option>
+                        <option>Харків</option>
+                        <option>Херсон</option>
+                        <option>Хмельницький</option>
+                        <option>Черкаси</option>
+                        <option>Чернівці</option>
+                        <option>Чернігів</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Дата виїзду</legend>
+                    <input type="date" name="trip-date" value="2025-06-01">
+                </fieldset>        
+                <fieldset>
+                    <legend>Кількість осіб</legend>
+                    <div class="pasiki">
+                        <button type="button" class="decrease">−</button>
+                        <input type="number" id="pas" value="1" min="1">
+                        <button type="button" class="increase">+</button>
+                    </div>
+                </fieldset>
+                <button type="button" onclick="window.location.href='result.html'" class="qqq">
+                    Підтвердити
+                </button>                                      
+            </form>
+        </div>
+        <script>
+            const decreaseBtn = document.querySelector('.decrease');
+            const increaseBtn = document.querySelector('.increase');
+            const input = document.getElementById('pas');
+            decreaseBtn.addEventListener('click', () => {
+                if (parseInt(input.value) > parseInt(input.min)) {
+                    input.value = parseInt(input.value) - 1;
+                }
+            });
+            increaseBtn.addEventListener('click', () => {
+                input.value = parseInt(input.value) + 1;
+            });
+        </script>
+            <div class="copyright" align="center">
+        Copyright © 2025 DuckBus - Всі права захищено. 
+    </div>
+</body>
+</html>
